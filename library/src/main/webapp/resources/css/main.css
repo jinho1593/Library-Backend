@@ -1,0 +1,163 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background-color: #ADD8E6; /* 연한 파랑색 */
+    padding: 10px;
+}
+
+.header-logo {
+    margin-right: 30px;
+}
+
+.header-logo button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo .logo {
+    max-height: 200px;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.buttons button {
+    margin-left: 18px;
+    padding: 5px 10px;
+    font-size: 19px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+.hidden {
+    display: none;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.book-item {
+    width: 150px; /* 원하는 너비 설정 */
+    text-align: center;
+    text-decoration: none; /* 링크 기본 스타일 제거 */
+    color: inherit; /* 기본 텍스트 색상 상속 */
+}
+
+.book-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.hidden {
+    display: none;
+}
+
+.toggle-buttons {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start; /* 버튼을 좌측 정렬 */
+    align-items: center;
+}
+
+.toggle-buttons button {
+    padding: 10px 20px; /* 크기 조정 */
+    font-size: 16px; /* 폰트 크기 조정 */
+    cursor: pointer;
+    background-color: #6B66FF; /* 기본 배경색 변경 */
+    color: white; /* 텍스트 색상 변경 */
+    border: none;
+    border-radius: 8px; /* 모서리 둥글게 하기 */
+    margin: 0 10px; /* 버튼 사이 간격 조정 */
+    transition: background-color 0.3s, transform 0.2s; /* 색상과 크기 변환 효과 */
+}
+
+.toggle-buttons button:hover {
+    background-color: #3B36CF; /* 호버 시 배경색 변경 (어두운 녹색) */
+    transform: scale(1.05); /* 호버 시 버튼 크기 확대 */
+}
+
+
+footer {
+    background-color: #f0f0f0; 
+    padding: 10px;
+    text-align: center;
+    height: 130px;
+    width: 100%;
+    margin-top: auto; /* 푸터를 페이지의 아래에 고정 */
+}
