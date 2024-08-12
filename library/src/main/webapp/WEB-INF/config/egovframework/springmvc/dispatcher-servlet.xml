@@ -8,6 +8,7 @@
                 http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd">
 
     <context:component-scan base-package="egovframework" />
+    <mvc:resources mapping="/resources/**" location="/resources/" />
     <mvc:annotation-driven />
 
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
@@ -57,5 +58,5 @@
     </bean>
 	<!-- /For Pagination Tag -->
 
-    <mvc:view-controller path="/cmmn/validator.do" view-name="cmmn/validator"/>
+    <mvc:view-controller path="/cmmn/validator" view-name="cmmn/validator"/>
 </beans>
