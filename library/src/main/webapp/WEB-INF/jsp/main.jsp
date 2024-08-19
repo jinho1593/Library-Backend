@@ -25,7 +25,7 @@
 
         <!-- 우측의 버튼들 -->
         <div class="buttons">
-            <button>로그인</button>
+			<button onclick="location.href='${pageContext.request.contextPath}/loginPage'">로그인</button>
             <button>회원가입</button>
             <button>문의등록</button>
         </div>
