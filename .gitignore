@@ -1,6 +1,4 @@
 /.metadata/
 *.xml
-*.xml
 library/src/main/resources/egovframework/spring/context-datasource.xml
 /library/src/main/resources/egovframework/spring
-*.xml
