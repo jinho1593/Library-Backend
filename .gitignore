@@ -1,1 +1,7 @@
 /.metadata/
+*.xml
+/library/target/classes/egovframework/spring
+.classpath
+.factorypath
+.project
+
