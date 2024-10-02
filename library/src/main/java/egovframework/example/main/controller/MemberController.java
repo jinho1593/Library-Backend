@@ -27,7 +27,7 @@ public class MemberController {
 	   
 	@GetMapping("/signup")
 	public String signupView() {
-	   System.out.println("로그인페이지 접근성공");
+	   System.out.println("회원가입페이지 접근성공");
 	   return "signupPage";
 	}
 	
