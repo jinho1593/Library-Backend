@@ -6,8 +6,7 @@ import egovframework.example.main.valueobject.memberSignupVO;
 
 @Mapper("memberServiceMapper")
 public interface MemberServiceMapper {
-	boolean isUserExists(String userId);
-	
 	void insertMember(memberSignupVO vo);
-
+	boolean isUserExists(String userId);
+	boolean isEmailExists(String email);
 }
