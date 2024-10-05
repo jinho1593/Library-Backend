@@ -109,6 +109,13 @@ public class MemberController {
 	      return "reservation-status";
 	   }
 	
+	@GetMapping("/logout")
+	public String logout(Model model, HttpSession session) {
+		session.invalidate();
+		
+		return "main";
+	}
+	
 
 	
 }
