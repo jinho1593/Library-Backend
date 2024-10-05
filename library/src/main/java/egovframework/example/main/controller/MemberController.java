@@ -1,5 +1,8 @@
 package egovframework.example.main.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -8,6 +11,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import egovframework.example.main.service.member.MemberService;
 import egovframework.example.main.valueobject.memberSignupVO;
@@ -46,4 +51,18 @@ public class MemberController {
         // 회원가입 성공 시 리다이렉트를 사용하여 메인 페이지로 이동
         return "redirect:/main";
     }
+	
+	@PostMapping("/checkUserId")
+	@ResponseBody
+	public String checkUserId(@RequestParam String userId) {
+		return String.valueOf(memberService.isUserExists(userId));
+	}
+	
+	@PostMapping("/checkEmail")
+	@ResponseBody
+	public String checkEmail(@RequestParam String email) {
+		return String.valueOf(memberService.isEmailExists(email));
+	}
+	
+	
 }
