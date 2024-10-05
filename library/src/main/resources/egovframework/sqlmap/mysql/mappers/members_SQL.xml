@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="egovframework.example.main.service.member.Impl.MemberServiceMapper"> 
+
+	<insert id="insertMember" parameterType="egovframework.example.main.valueobject.memberSignupVO">
+    	INSERT 
+    	INTO 
+    		members (name, userId, email, password, phone)
+    	VALUES 
+    		(
+    			#{name}, 
+    			#{userId}, 
+    			#{email}, 
+    			#{password}, 
+    			#{phone}
+    			)
+	</insert>
+
+	<select id="isUserExists" parameterType="String" resultType="boolean">
+   	 	SELECT 
+   	 		COUNT(*) > 0 
+   	 		FROM 
+   	 			members 
+   	 		WHERE 
+   	 			userId = #{userId}
+	</select>
+	
+	<select id="isEmailExists" parameterType="String" resultType="boolean">
+    	SELECT 
+    		COUNT(*) > 0 
+    		FROM 
+    			members 
+    		WHERE 
+    			email = #{email}
+</select>
+
+</mapper>

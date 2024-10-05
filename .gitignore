@@ -1,6 +1,21 @@
 /.metadata/
-*.xml
-/library/src/main/resources/egovframework/spring
 .classpath
 .factorypath
 .project
+/library/target/library-1.0.0/WEB-INF/classes/egovframework/spring
+library/target/m2e-wtp/web-resources/META-INF/maven/library/library/pom.xml
+Servers/Tomcat v9.0 Server at localhost-config/context.xml
+Servers/Tomcat v9.0 Server at localhost-config/server.xml
+library/target/library-1.0.0/WEB-INF/web.xml
+Servers/Tomcat v9.0 Server at localhost-config/tomcat-users.xml
+Servers/Tomcat v9.0 Server at localhost-config/web.xml
+library/target/library-1.0.0/WEB-INF/config/egovframework/validator/validator-rules.xml
+library/target/library-1.0.0/WEB-INF/config/egovframework/springmvc/dispatcher-servlet.xml
+library/target/library-1.0.0/WEB-INF/config/egovframework/validator/validator.xml
+library/src/main/resources/log4j2.xml
+library/src/main/webapp/WEB-INF/config/egovframework/validator/validator-rules.xml
+library/src/main/webapp/WEB-INF/web.xml
+library/target/classes/egovframework/sqlmap/mysql/sql-mapper-config.xml
+library/pom.xml
+library/.settings/org.eclipse.wst.common.project.facet.core.xml
+library/src/main/webapp/WEB-INF/config/egovframework/springmvc/dispatcher-servlet.xml
