@@ -32,6 +32,15 @@
     			members 
     		WHERE 
     			email = #{email}
-</select>
+	</select>
+	
+	<select id="login" parameterType="String" resultType="egovframework.example.main.valueobject.memberAllVO">
+    	SELECT 
+    		* 
+    	FROM 
+    		members 
+    	WHERE 
+    		userId = #{userId}
+	</select>
 
 </mapper>
