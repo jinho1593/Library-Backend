@@ -1,4 +1,9 @@
 package egovframework.example.main.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+import javax.servlet.http.HttpSession;
+
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -20,11 +25,35 @@ public class MemberController {
 	@Resource(name = "memberService")
     private MemberService memberService;
 
-	@GetMapping("/login")
-	public String login() {
-	   System.out.println("로그인페이지 접근성공");
-	   return "loginPage";
-	}
+	 @GetMapping("/login")
+	 public String showLoginPage() {
+		System.out.println("로그인페이지 접근성공");
+
+	    return "loginPage";
+	 }
+	 
+	 @PostMapping("/login")
+	 public String login(Model model, HttpSession session, @RequestParam String userId, @RequestParam String password) {
+	     System.out.println("로그인 메서드 호출됨 - userId: " + userId + ", password: " + password);
+	     
+	     // 이미 로그인한 경우, 메인 페이지로 리다이렉트
+	     if (session.getAttribute("userInfo") != null) {
+	         System.out.println("이미 로그인된 사용자입니다.");
+	         return "redirect:/main";  
+	     }
+	     
+	     int result = memberService.login(session, userId, password);
+	     System.out.println("로그인 결과: " + result); // 결과 확인
+
+	     if (result == 1) {
+	         System.out.println("로그인 성공, 메인 페이지로 리다이렉트합니다.");
+	         return "redirect:/main"; // 로그인 성공 시 메인 페이지로 이동
+	     } else {
+	         System.out.println("로그인 실패: 존재하지 않는 아이디거나 비밀번호가 틀렸습니다.");
+	         model.addAttribute("errorMessage", "존재하지 않는 아이디거나 비밀번호가 틀렸습니다.");
+	         return "loginPage"; // 로그인 페이지로 이동
+	     }
+	 }
 	   
 	@GetMapping("/signup")
 	public String signupView() {
@@ -59,18 +88,6 @@ public class MemberController {
 	public String checkEmail(@RequestParam String email) {
 		return String.valueOf(memberService.isEmailExists(email));
 	}
-	
-	@GetMapping("/mypage")
-	   public String mainPage() {
-	      System.out.println("접근성공");
-	      return "mypage";
-	   }
-	
-	@GetMapping("/loanStatus")
-	   public String loanStatus() {
-	      System.out.println("접근성공");
-	      return "loan-status";
-	   }
 	
 	
 }
