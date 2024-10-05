@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -22,11 +24,17 @@
     </div>
 
     <!-- 우측의 버튼들 -->
-    <div class="buttons">
-        <button onclick="location.href='${pageContext.request.contextPath}/member/login'">로그인</button>
-        <button onclick="location.href='${pageContext.request.contextPath}/member/signup'">회원가입</button>
-        <button>문의등록</button>
-    </div>
+	<div class="buttons">
+	    <c:if test="${not empty sessionScope.userInfo}">
+	        <button onclick="location.href='${pageContext.request.contextPath}/member/mypage'">마이페이지</button>
+	        <button onclick="location.href='${pageContext.request.contextPath}/member/logout'">로그아웃</button>
+	    </c:if>
+	    <c:if test="${empty sessionScope.userInfo}">
+	        <button onclick="location.href='${pageContext.request.contextPath}/member/login'">로그인</button>
+	        <button onclick="location.href='${pageContext.request.contextPath}/member/signup'">회원가입</button>
+	    </c:if>
+	    <button>문의등록</button>
+	</div>
 </div>
 
 </body>
