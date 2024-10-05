@@ -1,0 +1,11 @@
+footer {
+    background-color: #f0f0f0; 
+    padding: 10px;
+    text-align: center;
+    height: 130px;
+    width: 100%;
+    position: relative; /* 푸터를 상대 위치로 설정 */
+    bottom: 0; /* 화면의 맨 아래에 위치 */
+    left: 0;
+    z-index: 1000; /* 푸터가 다른 요소들 위에 표시되도록 설정 */
+}

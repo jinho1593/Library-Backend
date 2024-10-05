@@ -1,0 +1,58 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 페이지 전체 컨테이너 스타일 */
+.mypage-container {
+    text-align: center;
+    margin: 20px auto; /* 여백을 줄임 */
+    width: 80%;
+    max-width: 800px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 제목 스타일 */
+.mypage-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px; /* 여백을 줄임 */
+}
+
+/* 버튼 컨테이너를 가로 정렬 (Flexbox) */
+.button-container {
+    display: flex;
+    justify-content: center; /* 가운데 정렬 */
+    gap: 20px; /* 버튼 사이 간격 */
+}
+
+/* 버튼 스타일 */
+.mypage-button {
+    padding: 15px 30px;
+    background-color: #4CAF50; /* 초록색 버튼 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* 버튼 호버 효과 */
+.mypage-button:hover {
+    background-color: #45a049; /* 버튼 호버 시 더 어두운 초록색 */
+}
+
+/* 반응형 디자인 - 작은 화면에서는 버튼이 세로로 정렬 */
+@media (max-width: 600px) {
+    .button-container {
+        flex-direction: column; /* 작은 화면에서는 세로 정렬 */
+    }
+
+    .mypage-button {
+        width: 100%;
+        padding: 15px;
+    }
+}
