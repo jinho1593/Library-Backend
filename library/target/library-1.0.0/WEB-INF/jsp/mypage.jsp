@@ -18,8 +18,8 @@
         <div class="button-container">
     <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/member/loanStatus'">대출</button>
     <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/member/reservationStatus'">신청</button>
-    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/bookshelf'">책꽂이</button>
-    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/inquiry'">1:1 문의</button>
+    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/member/bookshelf'">책꽂이</button>
+    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/member/inquiry'">1:1 문의</button>
 </div>
     </div>
 
