@@ -1,7 +1,5 @@
 package egovframework.example.main.controller;
 
-import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.http.HttpSession;
 
 import javax.annotation.Resource;
@@ -107,6 +105,12 @@ public class MemberController {
 	   public String reservationStatus() {
 	      System.out.println("접근성공");
 	      return "reservation-status";
+	   }
+	
+	@GetMapping("/bookshelf")
+	   public String bookshelf() {
+	      System.out.println("접근성공");
+	      return "bookshelf";
 	   }
 	
 
