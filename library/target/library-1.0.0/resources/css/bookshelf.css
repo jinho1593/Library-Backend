@@ -1,0 +1,72 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookshelf-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.bookshelf-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.bookshelf-examples ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bookshelf-examples li {
+    display: inline-block;
+    width: 30%;
+    margin: 10px;
+    background-color: #ADD8E6; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.bookshelf-examples a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+    display: block;
+}
+
+
+.bookshelf-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.bookshelf-button:hover {
+    background-color: #218838; 
+}
+
+
+@media (max-width: 768px) {
+    .bookshelf-examples li {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
