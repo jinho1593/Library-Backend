@@ -72,5 +72,11 @@ public class MemberController {
 	      return "loan-status";
 	   }
 	
+	@GetMapping("/reservationStatus")
+	   public String reservationStatus() {
+	      System.out.println("접근성공");
+	      return "reservation-status";
+	   }
+	
 	
 }
