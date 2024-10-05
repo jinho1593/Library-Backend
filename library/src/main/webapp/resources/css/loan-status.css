@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+/* 전체 컨테이너 스타일 */
+.loan-status-container {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 제목 스타일 */
+.loan-status-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 현재 대출 중인 도서 섹션 스타일 */
+.current-loans, .previous-loans {
+    background-color: #f9f9f9; /* 배경색 */
+    border: 1px solid #ccc; /* 테두리 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    padding: 20px; /* 안쪽 여백 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 섹션 제목 스타일 */
+.current-loans h3, .previous-loans h3 {
+    font-size: 24px;
+    color: #4CAF50; /* 텍스트 색상 */
+    margin-bottom: 15px;
+}
+
+/* 도서 목록 스타일 */
+.current-loans ul, .previous-loans ul {
+    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+}
+
+.current-loans li, .previous-loans li {
+    padding: 10px; /* 각 항목 안쪽 여백 */
+    border-bottom: 1px solid #ddd; /* 하단 테두리 */
+}
+
+.current-loans li:last-child, .previous-loans li:last-child {
+    border-bottom: none; /* 마지막 항목 하단 테두리 제거 */
+}
+
+/* 반응형 디자인 - 작은 화면에서 스타일 */
+@media (max-width: 600px) {
+    .loan-status-container {
+        width: 95%; /* 화면에 따라 너비 조정 */
+    }
+}
