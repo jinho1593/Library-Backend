@@ -1,8 +1,4 @@
 package egovframework.example.main.controller;
-
-import java.util.HashMap;
-import java.util.Map;
-
 import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
@@ -63,6 +59,18 @@ public class MemberController {
 	public String checkEmail(@RequestParam String email) {
 		return String.valueOf(memberService.isEmailExists(email));
 	}
+	
+	@GetMapping("/mypage")
+	   public String mainPage() {
+	      System.out.println("접근성공");
+	      return "mypage";
+	   }
+	
+	@GetMapping("/loanStatus")
+	   public String loanStatus() {
+	      System.out.println("접근성공");
+	      return "loan-status";
+	   }
 	
 	
 }

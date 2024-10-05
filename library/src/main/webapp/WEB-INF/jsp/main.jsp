@@ -6,32 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
 </head>
-<body>
-    <div class="header">
-        <!-- 좌측의 로고 버튼 -->
-        <div class="header-logo">
-            <button onclick="location.href='${pageContext.request.contextPath}/main'">
-                <img src="${pageContext.request.contextPath}/resources/images/librarylog.png" alt="로고" class="logo">
-            </button>
-        </div>
-        
-        <!-- 중앙의 통합 자료 검색 바 -->
-        <div class="search-bar">
-            <input type="text" placeholder="통합자료검색">
-            <button>검색</button>
-        </div>
-
-        <!-- 우측의 버튼들 -->
-        <div class="buttons">
-        
-            <button onclick="location.href='${pageContext.request.contextPath}/member/login'">로그인</button>
-            <button onclick="location.href='${pageContext.request.contextPath}/member/signup'">회원가입</button>
-            <button>문의등록</button>
-        </div>
-    </div>
-
+	<%@ include file="/WEB-INF/jsp/header.jsp" %>
     <!-- 페이지 콘텐츠 -->
     <div class="content">
         <!-- 추천 도서 섹션 -->
@@ -87,11 +66,7 @@
     </div>
 
     <!-- 푸터 영역 -->
-    <footer>
-        <p>&copy; 2024 Library. All rights reserved.</p>
-        <p>김진호</p>
-        <p>전화번호: 010-3845-3252</p>
-    </footer>
+	<%@ include file="/WEB-INF/jsp/footer.jsp" %>
 
     <script>
         function showSection(sectionId) {
