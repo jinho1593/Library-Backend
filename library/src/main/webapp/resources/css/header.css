@@ -1,0 +1,83 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 120px;
+    background-color: #ADD8E6;
+    padding: 10px;
+    position: relative; /* 헤더를 상대 위치로 설정 */
+    top: 0; /* 화면의 맨 위에 위치 */
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 헤더가 다른 요소들 위에 표시되도록 설정 */
+}
+
+.header-logo {
+    margin-right: 30px;
+}
+
+.header-logo button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo .logo {
+    max-height: 200px;
+    max-width: 300px;
+    width: auto;
+    height: auto;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input[type="text"] {
+    width: 300px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+.search-bar button:hover {
+    background-color: #0056b3;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.buttons button {
+    margin-left: 18px;
+    padding: 5px 10px;
+    font-size: 19px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
