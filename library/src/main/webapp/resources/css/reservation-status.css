@@ -1,0 +1,59 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-status-container {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 800px;
+    font-family: 'Arial', sans-serif;
+}
+
+
+.reservation-status-container h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* 현재 예약 중인 항목과 예약 취소 내역 섹션 스타일 */
+.current-reservations, .canceled-reservations {
+    background-color: #f9f9f9; /* 배경색 */
+    border: 1px solid #ccc; /* 테두리 */
+    border-radius: 8px; /* 모서리 둥글게 */
+    padding: 20px; /* 안쪽 여백 */
+    margin-bottom: 20px; /* 아래쪽 여백 */
+}
+
+/* 섹션 제목 스타일 */
+.current-reservations h3, .canceled-reservations h3 {
+    font-size: 24px;
+    color: #FF9800; /* 예약 관련 텍스트 색상 */
+    margin-bottom: 15px;
+}
+
+/* 항목 리스트 스타일 */
+.current-reservations ul, .canceled-reservations ul {
+    list-style-type: none; /* 기본 리스트 스타일 제거 */
+    padding: 0; /* 기본 패딩 제거 */
+}
+
+.current-reservations li, .canceled-reservations li {
+    padding: 10px; /* 각 항목 안쪽 여백 */
+    border-bottom: 1px solid #ddd; /* 하단 테두리 */
+}
+
+.current-reservations li:last-child, .canceled-reservations li:last-child {
+    border-bottom: none; /* 마지막 항목 하단 테두리 제거 */
+}
+
+/* 반응형 디자인 - 작은 화면에서 스타일 */
+@media (max-width: 600px) {
+    .reservation-status-container {
+        width: 95%; /* 화면에 따라 너비 조정 */
+    }
+}

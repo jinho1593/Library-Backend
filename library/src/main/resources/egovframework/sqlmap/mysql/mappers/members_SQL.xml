@@ -24,7 +24,7 @@
    	 		WHERE 
    	 			userId = #{userId}
 	</select>
-	
+
 	<select id="isEmailExists" parameterType="String" resultType="boolean">
     	SELECT 
     		COUNT(*) > 0 
@@ -33,7 +33,7 @@
     		WHERE 
     			email = #{email}
 	</select>
-	
+
 	<select id="login" parameterType="String" resultType="egovframework.example.main.valueobject.memberAllVO">
     	SELECT 
     		* 

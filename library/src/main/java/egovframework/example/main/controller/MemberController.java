@@ -89,5 +89,25 @@ public class MemberController {
 		return String.valueOf(memberService.isEmailExists(email));
 	}
 	
+
+	@GetMapping("/mypage")
+	   public String mainPage() {
+	      System.out.println("접근성공");
+	      return "mypage";
+	   }
+	
+	@GetMapping("/loanStatus")
+	   public String loanStatus() {
+	      System.out.println("접근성공");
+	      return "loan-status";
+	   }
+	
+	@GetMapping("/reservationStatus")
+	   public String reservationStatus() {
+	      System.out.println("접근성공");
+	      return "reservation-status";
+	   }
+	
+
 	
 }

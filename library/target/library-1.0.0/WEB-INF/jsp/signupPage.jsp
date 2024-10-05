@@ -88,7 +88,6 @@
 
 </head>
 <body>
-
 <div class="container">
     <h2>회원가입</h2>
 
@@ -128,6 +127,7 @@
         <input type="submit" value="회원가입">
     </form>
 </div>
+
 
 </body>
 </html>
