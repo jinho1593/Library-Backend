@@ -35,15 +35,16 @@ public class MemberController {
 	 @PostMapping("/login")
 	 public String login(Model model, HttpSession session, @RequestParam String userId, @RequestParam String password) {
 	     System.out.println("로그인 메서드 호출됨 - userId: " + userId + ", password: " + password);
-	     
+	     	     
 	     // 이미 로그인한 경우, 메인 페이지로 리다이렉트
 	     if (session.getAttribute("userInfo") != null) {
 	         System.out.println("이미 로그인된 사용자입니다.");
 	         return "redirect:/main";  
 	     }
-	     
+	     	     
 	     int result = memberService.login(session, userId, password);
 	     System.out.println("로그인 결과: " + result); // 결과 확인
+	     System.out.println("세션에 저장된 userInfo: " + session.getAttribute("userInfo"));
 
 	     if (result == 1) {
 	         System.out.println("로그인 성공, 메인 페이지로 리다이렉트합니다.");

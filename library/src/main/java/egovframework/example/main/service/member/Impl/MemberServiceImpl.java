@@ -43,17 +43,13 @@ public class MemberServiceImpl implements MemberService {
 		memberAllVO vo = DAO.login(userId);
 				
 		if (vo == null) {
-			System.out.println("정보없음");
 			return -1;}
 		else {
 			if(encryptHelper.isMatch(password, vo.getPassword())) {
 				session.setAttribute("userInfo", vo);
-				
-				System.out.println("로그인 성공");
 				return 1;
 		
 			} else {
-				System.out.println("로그인 실패");
 				return 0;
 			}
 		}

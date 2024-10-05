@@ -22,6 +22,15 @@ public class memberAllVO {
 	
 	public String getPhone() { return phone; }
 	public void setPhone(String phone) { this.phone = phone; }
-	
+
+	@Override
+    public String toString() {
+        return "memberAllVO{" +
+                "name='" + name + '\'' +
+                ", userId='" + userId + '\'' +
+                ", email='" + email + '\'' +
+                ", phone='" + phone + '\'' +
+                '}'; // 비밀번호는 포함하지 않음
+    }
 
 }
