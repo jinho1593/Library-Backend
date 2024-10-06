@@ -5,6 +5,7 @@ D:\Project\Library-Backend\library\src\main\java\egovframework\example\main\cont
 D:\Project\Library-Backend\library\src\main\java\egovframework\example\cmmn\bcrypt\EncryptHelper.java
 D:\Project\Library-Backend\library\src\main\java\egovframework\example\main\service\member\Impl\MemberServiceImpl.java
 D:\Project\Library-Backend\library\src\main\java\egovframework\example\main\service\member\Impl\MemberServiceMapper.java
+D:\Project\Library-Backend\library\src\main\java\egovframework\example\main\controller\MyPageController.java
 D:\Project\Library-Backend\library\src\main\java\egovframework\example\main\controller\MemberController.java
 D:\Project\Library-Backend\library\src\main\java\egovframework\example\cmmn\EgovSampleExcepHndlr.java
 D:\Project\Library-Backend\library\src\main\java\egovframework\example\cmmn\web\EgovBindingInitializer.java

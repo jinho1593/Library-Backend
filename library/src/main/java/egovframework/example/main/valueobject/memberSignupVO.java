@@ -1,27 +1,27 @@
 package egovframework.example.main.valueobject;
 
-public class memberSignupVO {
-    private String name;
+public class memberSignupVO {  
     private String userId;
+    private String name;
     private String email;
     private String password;
     private String phone;
 
     // Getter와 Setter 메소드
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getUserId() {
         return userId;
     }
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getEmail() {

@@ -16,10 +16,10 @@
         <h2>마이페이지</h2>
         
         <div class="button-container">
-    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/member/loanStatus'">대출</button>
-    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/member/reservationStatus'">신청</button>
-    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/member/bookshelf'">책꽂이</button>
-    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/member/inquiry'">1:1 문의</button>
+    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/mypage/loanStatus'">대출</button>
+    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/mypage/reservationStatus'">신청</button>
+    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/mypage/bookshelf'">책꽂이</button>
+    <button class="mypage-button" onclick="location.href='${pageContext.request.contextPath}/mypage/inquiry'">1:1 문의</button>
 </div>
     </div>
 

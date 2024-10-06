@@ -5,16 +5,21 @@
 	<insert id="insertMember" parameterType="egovframework.example.main.valueobject.memberSignupVO">
     	INSERT 
     	INTO 
-    		members (name, userId, email, password, phone)
-    	VALUES 
-    		(
-    			#{name}, 
-    			#{userId}, 
-    			#{email}, 
-    			#{password}, 
-    			#{phone}
-    			)
+    		members 
+    			(userId, name, email, password, phone)
+   		 VALUES 
+   		 	(
+        		#{userId}, 
+        		#{name}, 
+        		#{email}, 
+        		#{password}, 
+        		#{phone}
+    		)
 	</insert>
+
+
+
+
 
 	<select id="isUserExists" parameterType="String" resultType="boolean">
    	 	SELECT 
