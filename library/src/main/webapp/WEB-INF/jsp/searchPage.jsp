@@ -27,6 +27,7 @@
                             <th>저자</th>
                             <th>카테고리</th>
                             <th>상태</th>
+                            <th>대출 신청</th> <!-- 대출 신청 버튼을 위한 열 추가 -->
                         </tr>
                     </thead>
                     <tbody>
@@ -37,6 +38,12 @@
                                 <td>${book.author}</td>
                                 <td>${book.categoryType}</td>
                                 <td>${book.stateType}</td>
+                                <td>
+                                    <form action="/loan/loanBook" method="post">
+                                        <input type="hidden" name="isbn" value="${book.isbn}" />
+                                        <button type="submit" class="loan-button">신청</button>
+                                    </form>
+                                </td>
                             </tr>
                         </c:forEach>
                     </tbody>

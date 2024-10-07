@@ -1,0 +1,36 @@
+/* 팝업창 스타일 */
+.popup {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.popup.show {
+    display: block;
+}
+.popup h2 {
+    margin-top: 0;
+}
+.popup button {
+    display: block;
+    margin: 20px auto 0;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+.overlay.show {
+    display: block;
+}

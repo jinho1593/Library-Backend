@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/header.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/footer.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/popup.css"> <!-- 팝업 스타일 추가 -->
 </head>
-	<%@ include file="/WEB-INF/jsp/header.jsp" %>
+<body>
+    <%@ include file="/WEB-INF/jsp/header.jsp" %>
+
     <!-- 페이지 콘텐츠 -->
     <div class="content">
         <!-- 추천 도서 섹션 -->
@@ -66,7 +69,15 @@
     </div>
 
     <!-- 푸터 영역 -->
-	<%@ include file="/WEB-INF/jsp/footer.jsp" %>
+    <%@ include file="/WEB-INF/jsp/footer.jsp" %>
+
+    <!-- 팝업 영역 -->
+    <div id="popup" class="popup">
+        <h2 id="popupTitle"></h2>
+        <p id="popupMessage"></p>
+        <button onclick="closePopup()">확인</button>
+    </div>
+    <div id="overlay" class="overlay"></div>
 
     <script>
         function showSection(sectionId) {
@@ -87,7 +98,29 @@
             document.getElementById('recommendations').classList.remove('hidden');
             document.getElementById('new-arrivals').classList.remove('hidden');
             document.getElementById('most-borrowed').classList.add('hidden');
+
+            // JSP에서 전달된 메시지를 받음
+            <% if (request.getAttribute("message") != null) { %>
+                showPopup('대출 성공', '<%= request.getAttribute("message") %>');
+            <% } else if (request.getAttribute("errorMessage") != null) { %>
+                showPopup('대출 실패', '<%= request.getAttribute("errorMessage") %>');
+            <% } %>
         });
+
+        // 팝업 표시 함수
+        function showPopup(title, message) {
+            document.getElementById('popupTitle').innerText = title;
+            document.getElementById('popupMessage').innerText = message;
+            document.getElementById('popup').classList.add('show');
+            document.getElementById('overlay').classList.add('show');
+        }
+
+        // 팝업 닫기 함수
+        function closePopup() {
+            document.getElementById('popup').classList.remove('show');
+            document.getElementById('overlay').classList.remove('show');
+            window.location.href = '${pageContext.request.contextPath}/main';  // 홈으로 리다이렉션
+        }
     </script>
 </body>
 </html>
