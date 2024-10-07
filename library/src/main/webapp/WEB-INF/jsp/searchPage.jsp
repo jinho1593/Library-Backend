@@ -15,10 +15,8 @@
         <!-- 검색어 표시 -->
         <h1>검색 결과: "${query}"</h1>
         
-        <!-- 검색 결과 목록 -->
         <div class="search-results">
-            <!-- 검색 결과가 있을 때 -->
-            <c:if test="${not empty searchResults}">
+            
                 <table class="results-table">
                     <thead>
                         <tr>
@@ -30,6 +28,7 @@
                             <th>대출 신청</th> <!-- 대출 신청 버튼을 위한 열 추가 -->
                         </tr>
                     </thead>
+                    <c:if test="${not empty searchResults}">
                     <tbody>
                         <c:forEach var="book" items="${searchResults}">
                             <tr>
@@ -47,10 +46,10 @@
                             </tr>
                         </c:forEach>
                     </tbody>
+                    </c:if>
                 </table>
-            </c:if>
+            
 
-            <!-- 검색 결과가 없을 때 -->
             <c:if test="${empty searchResults}">
                 <p class="no-results">입력하신 정보와 일치하는 도서가 존재하지 않습니다.</p>
             </c:if>
