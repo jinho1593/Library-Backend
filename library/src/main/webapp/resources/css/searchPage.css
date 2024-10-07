@@ -1,0 +1,57 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* 컨테이너 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 제목 스타일 */
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* 검색 결과 목록 스타일 */
+.search-results {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 테이블 스타일 */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+/* 테이블 헤더 스타일 */
+.results-table thead {
+    background-color: #007bff;
+    color: white;
+}
+
+.results-table th, .results-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.results-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease; /* 색상 변화에 부드러운 애니메이션 추가 */
+}
+
+.no-results {
+    color: #ff4d4f;
+    text-align: center;
+    margin-top: 20px;
+}
