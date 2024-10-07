@@ -31,4 +31,10 @@ public class MyPageController {
 	      System.out.println("접근성공");
 	      return "bookshelf";
 	   }
+	
+	@GetMapping("/inquiry")
+	   public String inquiry() {
+	      System.out.println("문의 접근성공");
+	      return "inquiry";
+	   }
 }
