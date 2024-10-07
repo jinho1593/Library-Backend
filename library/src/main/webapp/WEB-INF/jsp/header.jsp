@@ -17,10 +17,13 @@
         </button>
     </div>
 
-    <!-- 중앙의 통합 자료 검색 바 -->
+  	<!-- 중앙의 통합 자료 검색 바 -->
     <div class="search-bar">
-        <input type="text" placeholder="통합자료검색">
-        <button>검색</button>
+        <!-- 검색 폼 -->
+        <form action="${pageContext.request.contextPath}/search" method="get">
+            <input type="text" name="query" placeholder="통합자료검색" value="${param.query}">
+            <button type="submit">검색</button>
+        </form>
     </div>
 
     <!-- 우측의 버튼들 -->
