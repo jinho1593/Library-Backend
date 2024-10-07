@@ -8,6 +8,5 @@ public interface MemberService {
 	public void signupExec(memberSignupVO vo);
 	public boolean isUserExists(String userId);
 	public boolean isEmailExists(String email);
-	
 	public int login(HttpSession session, String userId, String password);
 }

@@ -33,18 +33,19 @@ public class MemberController {
 	 @PostMapping("/login")
 	 public String login(Model model, HttpSession session, @RequestParam String userId, @RequestParam String password) {
 	     System.out.println("로그인 메서드 호출됨 - userId: " + userId + ", password: " + password);
-	     	     
+	     
 	     // 이미 로그인한 경우, 메인 페이지로 리다이렉트
 	     if (session.getAttribute("userInfo") != null) {
 	         System.out.println("이미 로그인된 사용자입니다.");
 	         return "redirect:/main";  
 	     }
-	     	     
+	     
 	     int result = memberService.login(session, userId, password);
 	     System.out.println("로그인 결과: " + result); // 결과 확인
 	     System.out.println("세션에 저장된 userInfo: " + session.getAttribute("userInfo"));
 
 	     if (result == 1) {
+	         session.setAttribute("userId", userId); // 여기서 userId 저장
 	         System.out.println("로그인 성공, 메인 페이지로 리다이렉트합니다.");
 	         return "redirect:/main"; // 로그인 성공 시 메인 페이지로 이동
 	     } else {
@@ -53,6 +54,7 @@ public class MemberController {
 	         return "loginPage"; // 로그인 페이지로 이동
 	     }
 	 }
+
 	   
 	@GetMapping("/signup")
 	public String signupView() {
@@ -68,11 +70,11 @@ public class MemberController {
         } catch (Exception e) {
             System.err.println("회원가입 중 오류 발생: " + e.getMessage());
             e.printStackTrace();
-            // 예외가 발생하면 회원가입 페이지로 다시 이동
+            
             return "signupPage";
         }
 
-        // 회원가입 성공 시 리다이렉트를 사용하여 메인 페이지로 이동
+        
         return "redirect:/main";
     }
 	
